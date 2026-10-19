@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Almonte | Bienes raíces. Liderazgo. Crecimiento.</title>
+  <meta name="description" content="Soy Mario Almonte, empresario y asesor inmobiliario dominicano. CEO y Broker Owner de Alveare Realty.">
+  <meta name="keywords" content="Mario Almonte, Alveare Realty, Bienes raíces República Dominicana, Liderazgo, Asesor inmobiliario">
+  <meta name="author" content="Mario Almonte">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mario Almonte | Bienes raíces. Liderazgo. Crecimiento.">
+  <meta property="og:description" content="Los bienes raíces son mucho más que metros cuadrados, precios y transacciones. Son decisiones. Son relaciones. Son personas.">
+  <meta property="og:image" content="../assets/mario-almonte-retina.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/alveare-logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & Lenis Smooth Scroll -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Switcher to V2 WowFactor -->
+  <div style="background: rgba(14,16,21,0.92); border-bottom: 1px solid rgba(255,122,26,0.3); padding: 6px 0; text-align: center; font-size: 0.78rem; font-family: 'Space Mono', monospace; position: fixed; top: 0; left: 0; width: 100%; z-index: 1002; backdrop-filter: blur(8px);">
+    <span style="color: #a0a6b5;">EXPERIENCIA CINEMÁTICA CON PARALLAX:</span>
+    <a href="v2/" style="color: #ff7a1a; font-weight: 700; text-decoration: underline; margin-left: 6px;">Ver Edición V2 WowFactor →</a>
+  </div>
+
+  <!-- Navigation Header -->
+  <header class="site-header" id="siteHeader" style="top: 28px;">
+    <div class="container-fluid">
+      <div class="nav-wrapper">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-icon-wrap">
+            <svg class="brand-svg-logo" viewBox="0 0 120 120" fill="none">
+              <path d="M 60 12 L 100 36 L 100 52 L 60 28 L 20 52 L 20 36 Z" fill="#FF7A1A"/>
+              <path d="M 60 40 L 98 62 L 98 94 L 60 116 L 22 94 L 22 62 Z M 60 58 L 38 71 L 38 85 L 60 98 L 82 85 L 82 71 Z" fill="#FF7A1A"/>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-name">Mario Almonte</span>
+            <span class="brand-sub">Alveare Realty</span>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="#historia" class="nav-link"><span class="num">01</span> Mi Historia</a></li>
+            <li><a href="#alveare" class="nav-link"><span class="num">02</span> De Asesor a Empresario</a></li>
+            <li><a href="#lideres" class="nav-link"><span class="num">03</span> Crear Nuevos Líderes</a></li>
+            <li><a href="#filosofia" class="nav-link"><span class="num">04</span> Mi Filosofía</a></li>
+            <li><a href="#contenido" class="nav-link"><span class="num">05</span> Contenido</a></li>
+            <li><a href="#trabajemos" class="nav-link"><span class="num">06</span> Trabajemos Juntos</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="#trabajemos" class="btn-primary btn-header-cta">
+            <i data-lucide="message-square" style="width: 16px; height: 16px;"></i>
+            <span>Contactar a Mario</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: 5rem;">
+    <!-- ==========================================================================
+         HERO SECTION: EXACT TEXT
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container-fluid">
+        <div class="hero-grid">
+          
+          <div class="hero-content">
+            <div class="hero-pill-badge">
+              <span class="pulse-dot"></span>
+              <span class="hero-pill-text">MARIO ALMONTE</span>
+            </div>
+
+            <h1 class="hero-title" style="font-size: clamp(2rem, 3.8vw, 3.2rem);">
+              Bienes raíces.<br>
+              <span class="gradient-text">Liderazgo. Crecimiento.</span>
+            </h1>
+
+            <p class="hero-lead">
+              Soy <strong>Mario Almonte</strong>, empresario y asesor inmobiliario dominicano.<br><br>
+              Inicié mi trayectoria en bienes raíces en 2004, mucho antes de imaginar que más de dos décadas después estaría al frente de mi propia empresa y, sobre todo, de un equipo de profesionales que comparten una misma visión de crecimiento.<br><br>
+              Durante estos años he acompañado a cientos de personas y familias en decisiones importantes relacionadas con la compra, venta e inversión en propiedades. Esa experiencia me ha enseñado que los bienes raíces son mucho más que metros cuadrados, precios y transacciones.
+            </p>
+
+            <div style="background: rgba(255,122,26,0.08); border-left: 3px solid var(--accent-amber); padding: 1.25rem 1.5rem; margin: 1.5rem 0 2rem 0; border-radius: 0 8px 8px 0;">
+              <div style="font-size: 1.3rem; font-weight: 700; color: #fff;">Son decisiones.</div>
+              <div style="font-size: 1.3rem; font-weight: 700; color: #fff;">Son relaciones.</div>
+              <div style="font-size: 1.45rem; font-weight: 800; color: var(--accent-amber);">Son personas.</div>
+            </div>
+
+            <p class="hero-lead">
+              Hoy soy CEO y Broker Owner de <strong>Alveare Realty</strong>, empresa que representa la evolución de todo lo aprendido durante mi carrera y mi manera de entender este negocio.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#historia" class="btn-primary">
+                <span>Conoce Mi Historia</span>
+                <i data-lucide="arrow-down-right" style="width: 18px; height: 18px;"></i>
+              </a>
+              <a href="#trabajemos" class="btn-secondary">
+                <i data-lucide="compass" style="width: 16px; height: 16px;"></i>
+                <span>¿Qué te trae hasta aquí?</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-wrap">
+            <div class="portrait-frame" id="portraitFrame">
+              <picture>
+                <source srcset="../assets/mario-almonte-retina.webp" type="image/webp">
+                <img src="../assets/mario-almonte-retina.jpg" alt="Mario Almonte - CEO y Broker Owner de Alveare Realty" class="portrait-img" loading="eager" width="1080" height="1440">
+              </picture>
+              <div class="portrait-vignette"></div>
+
+              <div class="floating-glass-card card-top-right">
+                <div class="card-icon-hex">
+                  <i data-lucide="shield-check" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="card-text-group">
+                  <span class="card-title">Excelencia y Compromiso</span>
+                  <span class="card-subtitle">Mi Filosofía Profesional</span>
+                </div>
+              </div>
+
+              <div class="floating-glass-card card-bottom-left">
+                <div class="card-icon-hex">
+                  <i data-lucide="users" style="width: 22px; height: 22px;"></i>
+                </div>
+                <div class="card-text-group">
+                  <span class="card-title">Alveare Realty</span>
+                  <span class="card-subtitle">Crear Nuevos Líderes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 01: MI HISTORIA
+         ========================================================================== -->
+    <section class="section-space" id="historia" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Trayectoria</div>
+          <h2 class="section-title">MI HISTORIA</h2>
+          <p class="section-desc">
+            Más de 20 años creciendo dentro del mercado inmobiliario.
+          </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3.5rem);">
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+            Mi historia en bienes raíces comenzó en 2004.<br><br>
+            Estudié Administración de Empresas y encontré en el corretaje inmobiliario una combinación que inmediatamente llamó mi atención: independencia, emprendimiento, relaciones humanas y la posibilidad de construir algo propio.<br><br>
+            Los primeros años fueron, principalmente, años de aprendizaje.<br><br>
+            Tomé cursos, busqué referentes, estudié el mercado y traté de entender qué podía hacer diferente para ofrecer un mejor servicio.
+          </p>
+
+          <div style="margin: 2rem 0; background: rgba(255,122,26,0.08); border: 1px solid var(--border-amber); border-radius: var(--radius-md); padding: 1.75rem 2rem;">
+            <p style="font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+              Desde el principio comprendí algo que todavía forma parte de mi filosofía profesional:
+            </p>
+            <h3 style="font-size: 1.4rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">Los detalles importan.</h3>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; gap: 0.75rem; align-items: center; color: #fff;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-amber);"></i> <span>La manera en que presentas una propiedad importa.</span></li>
+              <li style="display: flex; gap: 0.75rem; align-items: center; color: #fff;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-amber);"></i> <span>La rapidez con la que respondes importa.</span></li>
+              <li style="display: flex; gap: 0.75rem; align-items: center; color: #fff;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-amber);"></i> <span>La forma en que acompañas a un cliente importa.</span></li>
+              <li style="display: flex; gap: 0.75rem; align-items: center; color: #fff;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-amber);"></i> <span><strong>Y la relación que queda después de cerrar una operación importa todavía más.</strong></span></li>
+            </ul>
+          </div>
+
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+            Con el paso de los años llegaron cientos de clientes, negociaciones, propiedades, proyectos, errores, aprendizajes y relaciones que terminaron convirtiéndose en parte fundamental de mi carrera.<br><br>
+            Cada etapa fue preparando la siguiente.<br><br>
+            <strong style="color: var(--accent-gold); font-size: 1.15rem;">Hasta llegar a Alveare.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 02: DE ASESOR A EMPRESARIO
+         ========================================================================== -->
+    <section class="section-space" id="alveare">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Evolución Empresarial</div>
+          <h2 class="section-title">DE ASESOR A EMPRESARIO</h2>
+          <p class="section-desc">
+            El nacimiento de Alveare Realty
+          </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3.5rem);">
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+            Después de aproximadamente dos décadas dentro de la industria inmobiliaria, decidí construir una empresa que representara mi manera de entender este negocio.
+          </p>
+
+          <div style="margin: 2rem 0; padding: 1.5rem 2rem; background: linear-gradient(135deg, rgba(255,122,26,0.12) 0%, rgba(14,16,21,0.6) 100%); border: 1px solid var(--border-amber); border-radius: var(--radius-md); text-align: center;">
+            <h3 style="font-size: 1.6rem; font-weight: 800; color: #fff;">Así nace Alveare Realty.</h3>
+            <p style="font-family: var(--font-mono); font-size: 1.05rem; color: var(--accent-amber); font-weight: 700; margin-top: 0.35rem;">Alveare significa colmena.</p>
+          </div>
+
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+            Y esa idea representa exactamente lo que quería construir: una organización donde diferentes personas trabajan, crecen y aportan hacia un propósito común.<br><br>
+            Hoy tengo el privilegio de liderar un equipo de asesores y profesionales inmobiliarios desde República Dominicana.<br><br>
+            Nuestro compromiso con el cliente sigue siendo fundamental, pero la visión de Alveare va mucho más allá de vender propiedades:
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem;">
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem 1.25rem; text-align: center;">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">Queremos construir profesionales.</h4>
+            </div>
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem 1.25rem; text-align: center;">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">Queremos construir relaciones.</h4>
+            </div>
+            <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem 1.25rem; text-align: center;">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">Y queremos construir líderes.</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 03: CREAR NUEVOS LÍDERES
+         ========================================================================== -->
+    <section class="section-space" id="lideres" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Liderazgo</div>
+          <h2 class="section-title">CREAR NUEVOS LÍDERES</h2>
+          <p class="section-desc">
+            Mi mayor satisfacción ya no está solamente en mis propias ventas
+          </p>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: clamp(2rem, 4vw, 3.5rem);">
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8;">
+            Durante muchos años mi crecimiento profesional podía medirse por las propiedades que vendía, los clientes que atendía o las operaciones que lograba cerrar.<br><br>
+            Con el tiempo mi definición de éxito comenzó a cambiar.<br><br>
+            <strong style="color: #fff; font-size: 1.15rem;">Hoy una de mis mayores satisfacciones es ver crecer a otras personas:</strong>
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.5rem 0 2rem 0;">
+            <div style="display: flex; align-items: center; gap: 1rem; color: #fff; font-size: 1.05rem;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-amber);"></span>
+              <span>Ver a un asesor realizar su primera venta.</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; color: #fff; font-size: 1.05rem;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-amber);"></span>
+              <span>Ver cómo alguien que llegó con inseguridad comienza a desarrollar confianza.</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; color: #fff; font-size: 1.05rem;">
+              <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-amber);"></span>
+              <span>Ver a un profesional asumir responsabilidades, construir su propia cartera de clientes y convertirse eventualmente en referente para otros.</span>
+            </div>
+          </div>
+
+          <div style="background: rgba(255,255,255,0.03); border-left: 4px solid var(--accent-gold); padding: 1.75rem 2rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 1.2rem; color: #fff; line-height: 1.6;">
+            Creo profundamente que liderar no consiste en crear seguidores.<br>
+            <strong style="color: var(--accent-amber); display: block; margin-top: 0.5rem;">Consiste en desarrollar personas capaces de convertirse también en líderes.</strong>
+          </div>
+
+          <p style="font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; margin-top: 2rem;">
+            Por eso una parte importante de mi trabajo actual está dedicada a crear estructuras, formación, oportunidades y una cultura que permita a nuestros asesores crecer profesional y personalmente.<br><br>
+            <strong>Mi objetivo no es construir una empresa que dependa de Mario Almonte.</strong><br>
+            <span style="color: var(--accent-amber); font-weight: 700; font-size: 1.15rem;">Mi objetivo es construir una organización llena de personas capaces de liderar.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 04: MI FILOSOFÍA
+         ========================================================================== -->
+    <section class="section-space" id="filosofia">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Principios</div>
+          <h2 class="section-title">MI FILOSOFÍA</h2>
+          <p class="section-desc">
+            Excelencia y compromiso
+          </p>
+        </div>
+
+        <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2.5rem;">
+          Hay dos palabras que resumen gran parte de mi manera de trabajar:
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 2.5rem;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">EXCELENCIA</h3>
+            <p style="font-size: 1.05rem; color: var(--accent-gold); font-style: italic; line-height: 1.6;">
+              “Excelencia significa hacer las cosas bien incluso cuando nadie está mirando.”
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-card); border-radius: var(--radius-lg); padding: 2.5rem;">
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 1rem;">COMPROMISO</h3>
+            <p style="font-size: 1.05rem; color: var(--accent-gold); font-style: italic; line-height: 1.6;">
+              “Compromiso significa permanecer presente durante todo el proceso y asumir responsabilidad por los resultados.”
+            </p>
+          </div>
+        </div>
+
+        <div style="max-width: 900px; margin: 2.5rem auto 0; text-align: center; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 2rem;">
+          <p style="font-size: 1.15rem; color: var(--text-primary); line-height: 1.7;">
+            Durante más de dos décadas he aprendido que la reputación profesional no se construye con una gran operación.<br><br>
+            <strong style="color: var(--accent-amber); font-size: 1.25rem;">Se construye con cientos de pequeñas decisiones tomadas correctamente a lo largo del tiempo.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 05: MÁS ALLÁ DE LOS BIENES RAÍCES
+         ========================================================================== -->
+    <section class="section-space" id="mas-alla" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Visión Integral</div>
+          <h2 class="section-title">MÁS ALLÁ DE LOS BIENES RAÍCES</h2>
+        </div>
+
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+            Mi marca personal representa bienes raíces, aunque no quiero limitarla exclusivamente a propiedades.<br><br>
+            Quiero compartir también lo que he aprendido construyendo una carrera, desarrollando una empresa, formando equipos, creando contenido y enfrentando los desafíos que acompañan el crecimiento empresarial.
+          </p>
+
+          <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.85rem; margin-bottom: 2.5rem;">
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Negocios.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Ventas.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Marketing inmobiliario.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Liderazgo.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Cultura empresarial.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Desarrollo de asesores.</span>
+            <span style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-full); padding: 0.6rem 1.4rem; color: #fff; font-weight: 700;">Errores y aprendizajes.</span>
+          </div>
+
+          <p style="font-size: 1.15rem; color: #fff;">
+            Después de más de 20 años en esta industria todavía continúo aprendiendo.<br>
+            <strong style="color: var(--accent-gold);">Y gran parte de esta nueva etapa consiste en compartir ese conocimiento.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 06: CONTENIDO
+         ========================================================================== -->
+    <section class="section-space" id="contenido">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Medios</div>
+          <h2 class="section-title">CONTENIDO</h2>
+          <p class="section-desc">
+            Lo que he aprendido, mientras sigo aprendiendo.
+          </p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <p style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 2.5rem;">
+            A través de mis redes sociales comparto experiencias, propiedades, opiniones, estrategias y situaciones reales del mundo inmobiliario.<br><br>
+            Mi intención es mostrar el negocio como realmente es: con oportunidades, retos, disciplina, relaciones humanas y muchísimo aprendizaje.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-secondary" style="padding: 1.25rem; font-size: 1rem; border-radius: var(--radius-md); justify-content: center;">
+              <i data-lucide="instagram" style="width: 20px; height: 20px; color: var(--accent-amber);"></i>
+              <span>[Instagram personal]</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-secondary" style="padding: 1.25rem; font-size: 1rem; border-radius: var(--radius-md); justify-content: center;">
+              <i data-lucide="building" style="width: 20px; height: 20px; color: var(--accent-amber);"></i>
+              <span>[Instagram Alveare Realty]</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 07: TRABAJEMOS JUNTOS
+         ========================================================================== -->
+    <section class="section-space" id="trabajemos" style="background: var(--bg-surface); border-top: 1px solid var(--border-subtle);">
+      <div class="container-fluid">
+        <div class="section-header-center">
+          <div class="section-tag">Contacto</div>
+          <h2 class="section-title">TRABAJEMOS JUNTOS</h2>
+          <p class="section-desc">
+            ¿Qué te trae hasta aquí?
+          </p>
+        </div>
+
+        <div class="action-paths-grid">
+          
+          <div class="path-card" onclick="openModalRoot('comprar')">
+            <div>
+              <div class="path-number">01</div>
+              <h3 class="path-title">QUIERO COMPRAR O INVERTIR</h3>
+              <p class="path-desc">
+                Si estás considerando comprar una propiedad o realizar una inversión inmobiliaria en República Dominicana, podemos ayudarte a evaluar tus opciones y tomar una decisión mejor informada.
+              </p>
+            </div>
+            <div class="path-cta-btn">
+              <span>Evaluar Opciones</span>
+              <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+            </div>
+          </div>
+
+          <div class="path-card" onclick="openModalRoot('vender')">
+            <div>
+              <div class="path-number">02</div>
+              <h3 class="path-title">QUIERO VENDER MI PROPIEDAD</h3>
+              <p class="path-desc">
+                Más de dos décadas en el mercado me han permitido entender que vender correctamente una propiedad requiere mucho más que publicarla.<br><br>
+                Estrategia, presentación, exposición, seguimiento y negociación forman parte del proceso.
+              </p>
+            </div>
+            <div class="path-cta-btn">
+              <span>Plan de Venta</span>
+              <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+            </div>
+          </div>
+
+          <div class="path-card" onclick="openModalRoot('crecer')">
+            <div>
+              <div class="path-number">03</div>
+              <h3 class="path-title">QUIERO CRECER EN BIENES RAÍCES</h3>
+              <p class="path-desc">
+                Si eres asesor inmobiliario o estás considerando desarrollar una carrera dentro de esta industria, quiero compartir contigo conocimientos, experiencias y herramientas que puedan ayudarte a acelerar tu crecimiento.
+              </p>
+            </div>
+            <div class="path-cta-btn">
+              <span>Crecer en el Equipo</span>
+              <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 08: UNA CARRERA QUE SIGUE EN CONSTRUCCIÓN
+         ========================================================================== -->
+    <section class="legacy-section">
+      <div class="container-fluid">
+        <div class="legacy-content">
+          <span class="legacy-tag">Legado</span>
+          <h2 class="legacy-heading">
+            UNA CARRERA QUE SIGUE EN CONSTRUCCIÓN
+          </h2>
+          
+          <div style="font-size: 1.25rem; color: var(--text-primary); line-height: 1.8; margin-bottom: 2.5rem;">
+            <p>2004 fue el inicio.</p>
+            <p>Más de veinte años después, sigo sintiendo que todavía queda muchísimo por construir.</p>
+            <p style="margin: 1.5rem 0; color: var(--accent-amber); font-weight: 700; font-family: var(--font-mono);">
+              Nuevos proyectos. • Nuevas personas. • Nuevos líderes. • Nuevas ideas.
+            </p>
+            <p style="color: var(--text-secondary);">Los bienes raíces fueron el punto de partida.</p>
+            <p style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-top: 0.5rem;">
+              El impacto que podamos generar en las personas será el verdadero legado.
+            </p>
+          </div>
+
+          <div class="legacy-author-block">
+            <span class="legacy-author-name">Mario Almonte</span>
+            <span class="legacy-author-title">CEO & Broker Owner</span>
+            <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-gold); letter-spacing: 0.1em;">Alveare Realty</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="rootModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeModalRoot()" aria-label="Cerrar">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+
+      <div class="modal-header">
+        <h3 id="rootModalTitle">Trabajemos Juntos</h3>
+        <p>Escribe tu consulta y conectemos directamente por WhatsApp con Mario Almonte.</p>
+      </div>
+
+      <form onsubmit="handleRootSubmit(event)">
+        <div class="form-group">
+          <label class="form-label">Nombre Completo</label>
+          <input type="text" id="rootName" class="form-input" placeholder="Tu nombre" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Teléfono / WhatsApp</label>
+          <input type="tel" id="rootPhone" class="form-input" placeholder="+1 (829) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">¿Qué te trae hasta aquí?</label>
+          <select id="rootIntent" class="form-select">
+            <option value="comprar">Quiero Comprar o Invertir</option>
+            <option value="vender">Quiero Vender Mi Propiedad</option>
+            <option value="crecer">Quiero Crecer en Bienes Raíces</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Mensaje o Detalles</label>
+          <textarea id="rootMsg" class="form-textarea" placeholder="Cuéntame brevemente sobre tu proyecto..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">
+          <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+          <span>Enviar Mensaje a Mario Almonte</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container-fluid">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/alveare-logo.svg" alt="Alveare Realty" class="footer-logo">
+          <div>
+            <div style="font-weight: 800; color: #fff;">Mario Almonte</div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">CEO & Broker Owner • Alveare Realty</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Mario Almonte & Alveare Realty. Todos los derechos reservados.</div>
+        <div>República Dominicana</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    window.openModalRoot = function(intent) {
+      const m = document.getElementById('rootModal');
+      const s = document.getElementById('rootIntent');
+      if (m) m.classList.add('active');
+      if (s && intent) s.value = intent;
+    };
+    window.closeModalRoot = function() {
+      const m = document.getElementById('rootModal');
+      if (m) m.classList.remove('active');
+    };
+    window.handleRootSubmit = function(e) {
+      e.preventDefault();
+      const name = document.getElementById('rootName').value;
+      const phone = document.getElementById('rootPhone').value;
+      const intent = document.getElementById('rootIntent').value;
+      const msg = document.getElementById('rootMsg').value;
+
+      let intentText = 'Información General';
+      if (intent === 'comprar') intentText = 'Quiero Comprar o Invertir';
+      if (intent === 'vender') intentText = 'Quiero Vender Mi Propiedad';
+      if (intent === 'crecer') intentText = 'Quiero Crecer en Bienes Raíces';
+
+      const text = encodeURIComponent(
+        `Hola Mario, te contacto a través de tu sitio web:\n\n` +
+        `👤 *Nombre:* ${name}\n` +
+        `📱 *Teléfono:* ${phone}\n` +
+        `🎯 *Motivo:* ${intentText}\n` +
+        (msg ? `📝 *Detalles:* ${msg}\n\n` : '\n') +
+        `Quedo a la espera de tu respuesta.`
+      );
+      window.open(`https://wa.me/18293417575?text=${text}`, '_blank');
+      closeModalRoot();
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- Alveare Icon (Hexagonal Beehive / Stylized 'A') -->
+  <g id="alveare-icon">
+    <!-- Top Chevron Roof -->
+    <path d="M 60 12 L 100 36 L 100 52 L 60 28 L 20 52 L 20 36 Z" fill="#FF7A1A"/>
+    <!-- Bottom Hexagonal Base with void -->
+    <path d="M 60 40 L 98 62 L 98 94 L 60 116 L 22 94 L 22 62 Z 
+             M 60 58 L 38 71 L 38 85 L 60 98 L 82 85 L 82 71 Z" fill="#FF7A1A"/>
+  </g>
+  <!-- ALVEARE Wordmark -->
+  <text x="120" y="65" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" letter-spacing="0.04em">ALVEARE</text>
+  <!-- REALTY Wordmark -->
+  <text x="122" y="104" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-weight="800" font-size="28" fill="#FFFFFF" letter-spacing="0.32em">REALTY</text>
+</svg>

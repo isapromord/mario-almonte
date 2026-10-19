@@ -1,0 +1,19 @@
+# Vercel & Node
+.vercel
+node_modules/
+
+# Python & Tests
+__pycache__/
+*.pyc
+test_runner*.py
+
+# Test audit screenshots (do not ignore assets/)
+/*.png
+/v2/*.png
+/v3/*.png
+screenshots/
+
+# System files
+.DS_Store
+Thumbs.db
+*.log

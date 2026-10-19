@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mario Almonte | Bienes raíces. Liderazgo. Crecimiento. (Cinematic Edition)</title>
+  <meta name="description" content="Soy Mario Almonte, empresario y asesor inmobiliario dominicano. CEO y Broker Owner de Alveare Realty.">
+  <meta name="keywords" content="Mario Almonte, Alveare Realty, Bienes raíces República Dominicana, Liderazgo, Asesor inmobiliario">
+  <meta name="author" content="Mario Almonte">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mario Almonte | Bienes raíces. Liderazgo. Crecimiento.">
+  <meta property="og:description" content="Los bienes raíces son mucho más que metros cuadrados, precios y transacciones. Son decisiones. Son relaciones. Son personas.">
+  <meta property="og:image" content="../assets/mario-almonte-retina.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/alveare-logo.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP & Lenis Smooth Scroll CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body>
+
+  <!-- Ambient Dynamic Golden Embers & Honeycomb Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+  <div class="ambient-noise"></div>
+
+  <!-- Custom Dual Cursor (Desktop) -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Telemetry HUD Dock (Right Edge) -->
+  <aside class="telemetry-dock" aria-label="Navegación de telemetría y audio">
+    <div class="telemetry-scene-counter">
+      <span id="currentSceneIndex">01</span>
+      <span class="total">/ 07</span>
+    </div>
+    <div class="telemetry-track">
+      <div class="telemetry-thumb" id="telemetryThumb"></div>
+    </div>
+    <button class="telemetry-sound-btn" id="soundToggleBtn" aria-label="Alternar sonido táctil" title="Sonido ambiental / Audio feedback">
+      <i data-lucide="volume-2" style="width: 15px; height: 15px;"></i>
+    </button>
+  </aside>
+
+  <!-- Modern Minimalist Executive Header: Brand Badge & Sleek Hamburger Trigger -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner-clean">
+      
+      <!-- Left: Minimalist Brand Pill -->
+      <a href="#hero" class="brand-link-modern" data-magnetic>
+        <div class="brand-symbol-box">
+          <svg viewBox="0 0 120 120" fill="none">
+            <path d="M 60 12 L 100 36 L 100 52 L 60 28 L 20 52 L 20 36 Z" fill="#FF7A1A"/>
+            <path d="M 60 40 L 98 62 L 98 94 L 60 116 L 22 94 L 22 62 Z M 60 58 L 38 71 L 38 85 L 60 98 L 82 85 L 82 71 Z" fill="#FF7A1A"/>
+          </svg>
+        </div>
+        <div class="brand-meta">
+          <span class="brand-title">Mario Almonte</span>
+          <span class="brand-tag">Alveare Realty</span>
+        </div>
+      </a>
+
+      <!-- Right: Sleek Floating Hamburger Trigger & Quick WhatsApp CTA -->
+      <div class="header-right-actions">
+        <a href="#trabajemos" class="btn-magnetic btn-header-cta" data-magnetic>
+          <span>Contactar</span>
+        </a>
+
+        <!-- Modern Architectural Hamburger Trigger (3 bars: 2 long white, 1 short orange) -->
+        <button class="hamburger-modern-btn" id="menuToggleBtn" onclick="toggleExecutiveMenu()" aria-label="Abrir menú de navegación" data-magnetic>
+          <div class="burger-bars">
+            <span class="bar bar-1"></span>
+            <span class="bar bar-2"></span>
+            <span class="bar bar-3"></span>
+          </div>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Full-Screen Architectural Glass Overlay Navigation (Awwwards / Locomotive caliber) -->
+  <div class="modern-nav-overlay" id="navOverlay">
+    <div class="nav-overlay-bg"></div>
+    <div class="nav-overlay-grid">
+      
+      <!-- Overlay Header Bar -->
+      <div class="overlay-header">
+        <div class="brand-meta">
+          <span class="brand-title" style="font-size: 1.15rem;">Mario Almonte</span>
+          <span class="brand-tag">Navegación Ejecutiva</span>
+        </div>
+        <button class="overlay-close-btn" onclick="toggleExecutiveMenu()" aria-label="Cerrar menú" data-magnetic>
+          <span>CERRAR</span>
+          <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+        </button>
+      </div>
+
+      <!-- Navigation Links: Monumental Swiss Editorial Flow -->
+      <nav class="overlay-nav-body">
+        <ul class="overlay-links-list">
+          <li class="overlay-item">
+            <a href="#hero" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">01</span>
+              <span class="o-text">Inicio</span>
+              <span class="o-tag">Visión General</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#historia" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">02</span>
+              <span class="o-text">Mi Historia</span>
+              <span class="o-tag">20 Años de Trayectoria</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#alveare" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">03</span>
+              <span class="o-text">De Asesor a Empresario</span>
+              <span class="o-tag">Alveare Realty</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#lideres" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">04</span>
+              <span class="o-text">Crear Nuevos Líderes</span>
+              <span class="o-tag">Liderazgo & Mentoría</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#filosofia" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">05</span>
+              <span class="o-text">Mi Filosofía</span>
+              <span class="o-tag">Excelencia y Compromiso</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#contenido" class="overlay-link" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">06</span>
+              <span class="o-text">Contenido & Medios</span>
+              <span class="o-tag">Compartir Conocimiento</span>
+            </a>
+          </li>
+          <li class="overlay-item">
+            <a href="#trabajemos" class="overlay-link highlight-item" onclick="toggleExecutiveMenu()">
+              <span class="o-idx">07</span>
+              <span class="o-text">Trabajemos Juntos</span>
+              <span class="o-tag">Comprar / Vender / Crecer</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Overlay Footer Meta -->
+      <div class="overlay-footer">
+        <div class="o-contact-item">
+          <span class="o-label">UBICACIÓN</span>
+          <span class="o-val">Santo Domingo, República Dominicana</span>
+        </div>
+        <div class="o-contact-item">
+          <span class="o-label">EMPRESA</span>
+          <span class="o-val">Alveare Realty • Broker Owner</span>
+        </div>
+        <div class="o-contact-item">
+          <span class="o-label">WHATSAPP DIRECTO</span>
+          <a href="https://wa.me/18293417575" target="_blank" class="o-val-link">+1 (829) 341-7575</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         SCENE 01: HERO CINEMATIC FULL-BLEED STAGE (Piso a Techo, Sin Cajas ni Marcos)
+         ========================================================================== -->
+    <section class="hero-parallax-scene" id="hero" data-scene="1">
+      
+      <!-- Full-Bleed Atmospheric Background Flank (Piso a techo, integrado sin cajas) -->
+      <div class="hero-cinematic-backdrop">
+        <picture>
+          <source srcset="../assets/mario-almonte-retina.webp" type="image/webp">
+          <img src="../assets/mario-almonte-retina.jpg" alt="Mario Almonte - CEO y Broker Owner de Alveare Realty" class="hero-cinematic-img" id="heroImgPhoto">
+        </picture>
+        <div class="hero-feather-left"></div>
+        <div class="hero-feather-bottom"></div>
+        <div class="hero-feather-top"></div>
+      </div>
+
+      <div class="container-canvas">
+        <div class="hero-layout-split">
+          
+          <!-- Editorial Copy: Exact Text from Mario with Parallax Data -->
+          <div class="hero-editorial-copy" id="heroTextWrapper">
+            <div class="hero-founder-eyebrow" data-parallax="-0.1">
+              BROKER OWNER & CEO · ALVEARE REALTY
+            </div>
+
+            <h1 class="hero-main-title" data-parallax="-0.2">
+              Bienes raíces.<br>
+              Liderazgo.<br>
+              <span class="gradient-accent">Crecimiento.</span>
+            </h1>
+
+            <!-- Dedicated Mobile Portrait: Mario stands proud, 100% visible, zero text overlap -->
+            <div class="hero-mobile-photo-stage">
+              <div class="mobile-photo-inner">
+                <img src="../assets/mario-almonte-retina.jpg" alt="Mario Almonte - CEO y Broker Owner de Alveare Realty" class="mobile-mario-photo">
+                <div class="mobile-photo-feather-bottom"></div>
+              </div>
+            </div>
+
+            <p class="hero-body-lead" data-parallax="-0.15">
+              Soy <strong>Mario Almonte</strong>, empresario y asesor inmobiliario dominicano.<br><br>
+              Inicié mi trayectoria en bienes raíces en 2004, mucho antes de imaginar que más de dos décadas después estaría al frente de mi propia empresa y, sobre todo, de un equipo de profesionales que comparten una misma visión de crecimiento.<br><br>
+              Durante estos años he acompañado a cientos de personas y familias en decisiones importantes relacionadas con la compra, venta e inversión en propiedades. Esa experiencia me ha enseñado que los bienes raíces son mucho más que metros cuadrados, precios y transacciones.
+            </p>
+
+            <!-- The Core Mantra with Glow Pulse -->
+            <div class="hero-mantra-box" data-parallax="-0.25">
+              <div class="mantra-line">Son decisiones.</div>
+              <div class="mantra-line">Son relaciones.</div>
+              <div class="mantra-line highlight">Son personas.</div>
+            </div>
+
+            <p class="hero-body-sub" data-parallax="-0.1">
+              Hoy soy CEO y Broker Owner de <strong>Alveare Realty</strong>, empresa que representa la evolución de todo lo aprendido durante mi carrera y mi manera de entender este negocio.
+            </p>
+
+            <div class="hero-btn-row">
+              <a href="#historia" class="btn-magnetic btn-magnetic-primary" data-magnetic>
+                <span>Conoce Mi Historia</span>
+                <i data-lucide="arrow-down-right" style="width: 16px; height: 16px;"></i>
+              </a>
+              <a href="#trabajemos" class="btn-magnetic btn-magnetic-ghost" data-magnetic>
+                <i data-lucide="compass" style="width: 15px; height: 15px;"></i>
+                <span>¿Qué te trae hasta aquí?</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Empty anchor column so text stays on the left while photo shines on the right -->
+          <div class="hero-spacer-column" aria-hidden="true"></div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Kinetic Marquee Ticker -->
+    <div class="kinetic-ticker-wrap">
+      <div class="kinetic-ticker-track" id="kineticMarquee">
+        <div class="ticker-phrase"><span>SON DECISIONES</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>SON RELACIONES</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>SON PERSONAS</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>LOS DETALLES IMPORTAN</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>ALVEARE REALTY</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>EXCELENCIA Y COMPROMISO</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>CONSTRUIR LÍDERES</span> <span class="ticker-dot"></span></div>
+        <!-- Duplicated for seamless loop -->
+        <div class="ticker-phrase"><span>SON DECISIONES</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>SON RELACIONES</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>SON PERSONAS</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>LOS DETALLES IMPORTAN</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>ALVEARE REALTY</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>EXCELENCIA Y COMPROMISO</span> <span class="ticker-dot"></span></div>
+        <div class="ticker-phrase"><span>CONSTRUIR LÍDERES</span> <span class="ticker-dot"></span></div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         SIGNATURE MOMENT: PINNED HORIZONTAL TIMELINE SCROLLER (MI HISTORIA)
+         Recipe R5 from wowfactor: Screen locks, scroll scrubs horizontally with depth!
+         ========================================================================== -->
+    <section class="h-timeline-section" id="historia" data-scene="2">
+      <div class="h-timeline-header-bar container-canvas">
+        <div class="h-timeline-title-group">
+          <div class="eyebrow-tag">Trayectoria Cinemática</div>
+          <h2 class="scene-title">MI HISTORIA</h2>
+          <p class="scene-intro">
+            Más de 20 años creciendo dentro del mercado inmobiliario. <span class="h-scroll-hint">Desplaza horizontalmente con el scroll ↓</span>
+          </p>
+        </div>
+
+        <!-- Mobile & Tablet Sideways Navigation Controls -->
+        <div class="timeline-nav-controls">
+          <div class="timeline-mobile-counter">
+            <span id="timelineCurrentSlide">01</span>
+            <span class="total">/ 04</span>
+          </div>
+          <div class="timeline-arrows-duo">
+            <button class="timeline-arrow-btn" id="timelinePrevBtn" aria-label="Capítulo anterior">
+              <i data-lucide="chevron-left" style="width: 18px; height: 18px;"></i>
+            </button>
+            <button class="timeline-arrow-btn" id="timelineNextBtn" aria-label="Siguiente capítulo">
+              <i data-lucide="chevron-right" style="width: 18px; height: 18px;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-timeline-wrapper" id="hTimelineWrap">
+        <div class="h-timeline-track" id="hTimelineTrack">
+          
+          <!-- Slide 01: El Inicio (2004) -->
+          <div class="h-timeline-slide">
+            <div class="h-card-inner">
+              <div class="h-slide-watermark">2004</div>
+              <span class="h-slide-badge">01 / El Inicio</span>
+              <h3 class="h-slide-title">Mi historia en bienes raíces comenzó en 2004.</h3>
+              <p class="h-slide-p">
+                Estudié Administración de Empresas y encontré en el corretaje inmobiliario una combinación que inmediatamente llamó mi atención: independencia, emprendimiento, relaciones humanas y la posibilidad de construir algo propio.
+              </p>
+              <div class="h-slide-highlight">
+                Los primeros años fueron, principalmente, años de aprendizaje. Tomé cursos, busqué referentes, estudié el mercado y traté de entender qué podía hacer diferente para ofrecer un mejor servicio.
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 02: Los Detalles Importan -->
+          <div class="h-timeline-slide highlight-slide">
+            <div class="h-card-inner">
+              <div class="h-slide-watermark">DETALLES</div>
+              <span class="h-slide-badge">02 / Filosofía Profesional</span>
+              <h3 class="h-slide-title">Desde el principio comprendí algo que todavía forma parte de mi filosofía profesional:</h3>
+              <div class="detalles-box-epic">
+                <div class="detalles-epic-head">Los detalles importan.</div>
+                <div class="detalles-epic-grid">
+                  <div class="detalles-epic-row">
+                    <span class="row-check">✓</span>
+                    <span>La manera en que presentas una propiedad importa.</span>
+                  </div>
+                  <div class="detalles-epic-row">
+                    <span class="row-check">✓</span>
+                    <span>La rapidez con la que respondes importa.</span>
+                  </div>
+                  <div class="detalles-epic-row">
+                    <span class="row-check">✓</span>
+                    <span>La forma en que acompañas a un cliente importa.</span>
+                  </div>
+                  <div class="detalles-epic-row row-special">
+                    <span class="row-check">★</span>
+                    <span>Y la relación que queda después de cerrar una operación importa todavía más.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 03: El Aprendizaje & La Experiencia -->
+          <div class="h-timeline-slide">
+            <div class="h-card-inner">
+              <div class="h-slide-watermark">EXP</div>
+              <span class="h-slide-badge">03 / Consolidación</span>
+              <h3 class="h-slide-title">Cientos de Clientes, Negociaciones y Relaciones</h3>
+              <p class="h-slide-p">
+                Con el paso de los años llegaron cientos de clientes, negociaciones, propiedades, proyectos, errores, aprendizajes y relaciones que terminaron convirtiéndose en parte fundamental de mi carrera.
+              </p>
+              <div class="h-slide-stepper">
+                <div class="stepper-dot-line"></div>
+                <div class="stepper-statement">
+                  Cada etapa fue preparando la siguiente.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 04: Hasta llegar a Alveare -->
+          <div class="h-timeline-slide alveare-arrival-slide">
+            <div class="h-card-inner">
+              <div class="h-slide-watermark">ALVEARE</div>
+              <span class="h-slide-badge">04 / La Cúspide</span>
+              <h3 class="h-slide-title" style="color: var(--accent-gold);">Hasta llegar a Alveare.</h3>
+              <p class="h-slide-p">
+                El punto de convergencia donde más de dos décadas de conocimiento se cristalizan en una colmena de líderes y excelencia inmobiliaria para la República Dominicana y el mundo.
+              </p>
+              <div class="alveare-emblem-glow">
+                <img src="../assets/alveare-logo.svg" alt="Alveare Realty" style="height: 52px;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 03: DE ASESOR A EMPRESARIO
+         ========================================================================== -->
+    <section class="hive-interactive-scene section-padding" id="alveare" data-scene="3">
+      <div class="container-canvas">
+        
+        <div class="scene-header-center">
+          <div class="eyebrow-tag">Evolución Empresarial</div>
+          <h2 class="scene-title">DE ASESOR A EMPRESARIO</h2>
+          <p class="scene-intro">
+            El nacimiento de Alveare Realty
+          </p>
+        </div>
+
+        <div class="text-narrative-card glow-card">
+          <p class="narrative-p">
+            Después de aproximadamente dos décadas dentro de la industria inmobiliaria, decidí construir una empresa que representara mi manera de entender este negocio.
+          </p>
+          
+          <div class="alveare-birth-banner">
+            <h3>Así nace Alveare Realty.</h3>
+            <p class="alveare-meaning">Alveare significa colmena.</p>
+          </div>
+
+          <p class="narrative-p">
+            Y esa idea representa exactamente lo que quería construir: una organización donde diferentes personas trabajan, crecen y aportan hacia un propósito común.<br><br>
+            Hoy tengo el privilegio de liderar un equipo de asesores y profesionales inmobiliarios desde República Dominicana.<br><br>
+            Nuestro compromiso con el cliente sigue siendo fundamental, pero la visión de Alveare va mucho más allá de vender propiedades:
+          </p>
+
+          <div class="tres-pilares-alveare">
+            <div class="pilar-alveare-box glow-card">
+              <i data-lucide="user-check" style="width: 28px; height: 28px; color: var(--accent-amber);"></i>
+              <h4>Queremos construir profesionales.</h4>
+            </div>
+            <div class="pilar-alveare-box glow-card">
+              <i data-lucide="heart-handshake" style="width: 28px; height: 28px; color: var(--accent-amber);"></i>
+              <h4>Queremos construir relaciones.</h4>
+            </div>
+            <div class="pilar-alveare-box glow-card">
+              <i data-lucide="award" style="width: 28px; height: 28px; color: var(--accent-amber);"></i>
+              <h4>Y queremos construir líderes.</h4>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 04: CREAR NUEVOS LÍDERES (With Apple-style Reading Highlight)
+         ========================================================================== -->
+    <section class="leaders-section section-padding" id="lideres" data-scene="4">
+      <div class="container-canvas">
+        
+        <div class="scene-header-center">
+          <div class="eyebrow-tag">Liderazgo Transformador</div>
+          <h2 class="scene-title">CREAR NUEVOS LÍDERES</h2>
+          <p class="scene-intro">
+            Mi mayor satisfacción ya no está solamente en mis propias ventas
+          </p>
+        </div>
+
+        <div class="text-narrative-card glow-card">
+          <p class="narrative-p">
+            Durante muchos años mi crecimiento profesional podía medirse por las propiedades que vendía, los clientes que atendía o las operaciones que lograba cerrar.<br><br>
+            Con el tiempo mi definición de éxito comenzó a cambiar.<br><br>
+            <strong style="color: #fff; font-size: 1.15rem;">Hoy una de mis mayores satisfacciones es ver crecer a otras personas:</strong>
+          </p>
+
+          <div class="satisfacciones-list">
+            <div class="satisfaccion-item">
+              <span class="bullet-dot"></span>
+              <p>Ver a un asesor realizar su primera venta.</p>
+            </div>
+            <div class="satisfaccion-item">
+              <span class="bullet-dot"></span>
+              <p>Ver cómo alguien que llegó con inseguridad comienza a desarrollar confianza.</p>
+            </div>
+            <div class="satisfaccion-item">
+              <span class="bullet-dot"></span>
+              <p>Ver a un profesional asumir responsabilidades, construir su propia cartera de clientes y convertirse eventualmente en referente para otros.</p>
+            </div>
+          </div>
+
+          <!-- Signature Scroller: Text illuminates line-by-line as you scroll -->
+          <div class="liderazgo-quote-highlight reading-scrub-box" id="readingBox1">
+            <p class="scrub-line">Creo profundamente que liderar no consiste en crear seguidores.</p>
+            <p class="scrub-line strong-accent">Consiste en desarrollar personas capaces de convertirse también en líderes.</p>
+          </div>
+
+          <p class="narrative-p" style="margin-top: 2rem;">
+            Por eso una parte importante de mi trabajo actual está dedicada a crear estructuras, formación, oportunidades y una cultura que permita a nuestros asesores crecer profesional y personalmente.
+          </p>
+
+          <div class="objetivo-duo-grid">
+            <div class="objetivo-box glow-card">
+              <div class="obj-lead">No es mi meta</div>
+              <p>Construir una empresa que dependa de Mario Almonte.</p>
+            </div>
+            <div class="objetivo-box active glow-card">
+              <div class="obj-lead">Mi verdadero objetivo</div>
+              <p>Construir una organización llena de personas capaces de liderar.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 05: MI FILOSOFÍA (EXCELENCIA Y COMPROMISO)
+         ========================================================================== -->
+    <section class="philosophy-spotlight-scene section-padding" id="filosofia" data-scene="5">
+      <div class="container-canvas">
+        
+        <div class="scene-header-center">
+          <div class="eyebrow-tag">Valores No Negociables</div>
+          <h2 class="scene-title">MI FILOSOFÍA</h2>
+          <p class="scene-intro">
+            Excelencia y compromiso
+          </p>
+        </div>
+
+        <p style="text-align: center; color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2.5rem;">
+          Hay dos palabras que resumen gran parte de mi manera de trabajar:
+        </p>
+
+        <div class="spotlight-duo-grid">
+          
+          <div class="spotlight-panel glow-card">
+            <span class="pillar-tag">Pilar 01</span>
+            <h3 class="pillar-name">EXCELENCIA</h3>
+            <div class="pillar-core-quote">
+              “Excelencia significa hacer las cosas bien incluso cuando nadie está mirando.”
+            </div>
+          </div>
+
+          <div class="spotlight-panel glow-card">
+            <span class="pillar-tag">Pilar 02</span>
+            <h3 class="pillar-name">COMPROMISO</h3>
+            <div class="pillar-core-quote">
+              “Compromiso significa permanecer presente durante todo el proceso y asumir responsabilidad por los resultados.”
+            </div>
+          </div>
+
+        </div>
+
+        <!-- The Reputation Equation: Exact Mario's Words with Raycast Glow -->
+        <div class="reputacion-statement-card glow-card" id="reputacionCard">
+          <p>
+            Durante más de dos décadas he aprendido que la reputación profesional no se construye con una gran operación.<br><br>
+            <strong style="color: var(--accent-amber); font-size: 1.25rem;">Se construye con cientos de pequeñas decisiones tomadas correctamente a lo largo del tiempo.</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 06: MÁS ALLÁ DE LOS BIENES RAÍCES & CONTENIDO
+         ========================================================================== -->
+    <section class="beyond-section section-padding" id="contenido" data-scene="6">
+      <div class="container-canvas">
+        
+        <div class="scene-header-center">
+          <div class="eyebrow-tag">Visión Integral</div>
+          <h2 class="scene-title">MÁS ALLÁ DE LOS BIENES RAÍCES</h2>
+          <p class="scene-intro">
+            Mi marca personal representa bienes raíces, aunque no quiero limitarla exclusivamente a propiedades.
+          </p>
+        </div>
+
+        <div class="text-narrative-card glow-card">
+          <p class="narrative-p" style="text-align: center; max-width: 860px; margin: 0 auto 2.5rem;">
+            Quiero compartir también lo que he aprendido construyendo una carrera, desarrollando una empresa, formando equipos, creando contenido y enfrentando los desafíos que acompañan el crecimiento empresarial.
+          </p>
+
+          <!-- The Exact 7 Topics from Mario -->
+          <div class="exact-topics-grid">
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="briefcase"></i> <span>Negocios.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="trending-up"></i> <span>Ventas.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="megaphone"></i> <span>Marketing inmobiliario.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="compass"></i> <span>Liderazgo.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="building-2"></i> <span>Cultura empresarial.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="graduation-cap"></i> <span>Desarrollo de asesores.</span></div>
+            <div class="exact-topic-badge" data-magnetic><i data-lucide="lightbulb"></i> <span>Errores y aprendizajes.</span></div>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-subtle);">
+            <p style="font-size: 1.15rem; color: #fff;">
+              Después de más de 20 años en esta industria todavía continúo aprendiendo.<br>
+              <strong style="color: var(--accent-gold);">Y gran parte de esta nueva etapa consiste en compartir ese conocimiento.</strong>
+            </p>
+          </div>
+
+          <!-- Section: Contenido -->
+          <div style="margin-top: 4rem; text-align: center;">
+            <div class="eyebrow-tag" style="margin-bottom: 0.5rem;">Medios & Redes</div>
+            <h3 style="font-size: 1.8rem; font-weight: 800; color: #fff; margin-bottom: 0.75rem;">CONTENIDO</h3>
+            <p style="font-size: 1.05rem; color: var(--accent-gold); font-style: italic; margin-bottom: 1.5rem;">
+              Lo que he aprendido, mientras sigo aprendiendo.
+            </p>
+            <p class="narrative-p" style="max-width: 800px; margin: 0 auto 2.5rem;">
+              A través de mis redes sociales comparto experiencias, propiedades, opiniones, estrategias y situaciones reales del mundo inmobiliario.<br><br>
+              Mi intención es mostrar el negocio como realmente es: con oportunidades, retos, disciplina, relaciones humanas y muchísimo aprendizaje.
+            </p>
+
+            <div class="social-channels-duo">
+              <!-- Card 1: Mario Almonte Personal -->
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="social-box-btn glow-card" data-magnetic>
+                <div class="social-icon-wrapper">
+                  <svg class="social-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="social-meta-info">
+                  <div class="social-overline-row">
+                    <span class="social-live-dot"></span>
+                    <span class="btn-top-label">Canal Personal</span>
+                  </div>
+                  <span class="btn-main-label">@marioalmonte</span>
+                  <span class="social-sub-desc">Reflexiones, trayectoria y visión inmobiliaria</span>
+                </div>
+                <div class="social-action-arrow">
+                  <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+                </div>
+              </a>
+
+              <!-- Card 2: Alveare Realty Firm -->
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="social-box-btn glow-card" data-magnetic>
+                <div class="social-icon-wrapper">
+                  <svg class="social-svg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                </div>
+                <div class="social-meta-info">
+                  <div class="social-overline-row">
+                    <span class="social-live-dot dot-alveare"></span>
+                    <span class="btn-top-label">Firma Inmobiliaria</span>
+                  </div>
+                  <span class="btn-main-label">@alvearerealty</span>
+                  <span class="social-sub-desc">Proyectos exclusivos y cultura corporativa</span>
+                </div>
+                <div class="social-action-arrow">
+                  <i data-lucide="arrow-up-right" style="width: 20px; height: 20px;"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 07: TRABAJEMOS JUNTOS (3 Interactive Action Pathways)
+         ========================================================================== -->
+    <section class="action-terminal-scene section-padding" id="trabajemos" data-scene="7">
+      <div class="container-canvas">
+        
+        <div class="scene-header-center">
+          <div class="eyebrow-tag">Acción & Colaboración</div>
+          <h2 class="scene-title">TRABAJEMOS JUNTOS</h2>
+          <p class="scene-intro">
+            ¿Qué te trae hasta aquí?
+          </p>
+        </div>
+
+        <div class="action-cards-trio">
+          
+          <!-- Option 1 -->
+          <div class="action-path-box glow-card" onclick="openLeadModalMario('comprar')">
+            <div>
+              <div class="path-code">OPCIÓN 01</div>
+              <h3 class="path-name">QUIERO COMPRAR O INVERTIR</h3>
+              <p class="path-paragraph">
+                Si estás considerando comprar una propiedad o realizar una inversión inmobiliaria en República Dominicana, podemos ayudarte a evaluar tus opciones y tomar una decisión mejor informada.
+              </p>
+            </div>
+            <div class="path-action-btn">
+              <span>Evaluar Opciones</span>
+              <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+            </div>
+          </div>
+
+          <!-- Option 2 -->
+          <div class="action-path-box glow-card" onclick="openLeadModalMario('vender')">
+            <div>
+              <div class="path-code">OPCIÓN 02</div>
+              <h3 class="path-name">QUIERO VENDER MI PROPIEDAD</h3>
+              <p class="path-paragraph">
+                Más de dos décadas en el mercado me han permitido entender que vender correctamente una propiedad requiere mucho más que publicarla.<br><br>
+                Estrategia, presentación, exposición, seguimiento y negociación forman parte del proceso.
+              </p>
+            </div>
+            <div class="path-action-btn">
+              <span>Comenzar Estrategia</span>
+              <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+            </div>
+          </div>
+
+          <!-- Option 3 -->
+          <div class="action-path-box glow-card" onclick="openLeadModalMario('crecer')">
+            <div>
+              <div class="path-code">OPCIÓN 03</div>
+              <h3 class="path-name">QUIERO CRECER EN BIENES RAÍCES</h3>
+              <p class="path-paragraph">
+                Si eres asesor inmobiliario o estás considerando desarrollar una carrera dentro de esta industria, quiero compartir contigo conocimientos, experiencias y herramientas que puedan ayudarte a acelerar tu crecimiento.
+              </p>
+            </div>
+            <div class="path-action-btn">
+              <span>Unirse al Equipo</span>
+              <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SCENE 08: UNA CARRERA QUE SIGUE EN CONSTRUCCIÓN (CINEMATIC CLIMAX HERO)
+         ========================================================================== -->
+    <section class="legacy-climax-scene" id="legado" data-scene="7">
+      <div class="legacy-ambient-glow"></div>
+      <div class="legacy-watermark-bg" aria-hidden="true">2004 — 2026+</div>
+
+      <div class="container-canvas legacy-hero-grid">
+        <!-- Top Editorial Beacon -->
+        <div class="legacy-beacon-row">
+          <div class="eyebrow-tag">
+            <span class="status-beacon"></span>
+            <span>El Legado</span>
+          </div>
+          <span class="legacy-date-counter">2004 — PRESENTE & FUTURO</span>
+        </div>
+
+        <!-- Grand Statement Hero Split -->
+        <div class="legacy-split-content">
+          <div class="legacy-headline-column">
+            <h2 class="legacy-quote-headline">
+              UNA CARRERA QUE SIGUE EN CONSTRUCCIÓN.
+            </h2>
+            <p class="legacy-hero-sub">
+              2004 fue el inicio. Más de veinte años después, sigo sintiendo que todavía queda muchísimo por construir.
+            </p>
+
+            <div class="construir-tags-flow">
+              <span class="pill-chip" data-magnetic><i data-lucide="compass" style="width: 14px; height: 14px;"></i> Nuevos proyectos.</span>
+              <span class="pill-chip" data-magnetic><i data-lucide="users" style="width: 14px; height: 14px;"></i> Nuevas personas.</span>
+              <span class="pill-chip" data-magnetic><i data-lucide="award" style="width: 14px; height: 14px;"></i> Nuevos líderes.</span>
+              <span class="pill-chip" data-magnetic><i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Nuevas ideas.</span>
+            </div>
+          </div>
+
+          <!-- Legacy Climax Card (The Final Philosophy & Signature) -->
+          <div class="legacy-executive-card glow-card" data-magnetic>
+            <div class="card-origin-tag">PUNTO DE PARTIDA</div>
+            <p class="line-origin">Los bienes raíces fueron el punto de partida.</p>
+            
+            <div class="legacy-divider-line"></div>
+            
+            <p class="line-legacy-final">
+              “El impacto que podamos generar en las personas será el verdadero legado.”
+            </p>
+
+            <div class="legacy-sign-block">
+              <div>
+                <span class="sign-name">Mario Almonte</span>
+                <span class="sign-title">CEO & Broker Owner</span>
+                <span class="sign-company">Alveare Realty</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Lead Modal -->
+  <div class="modal-backdrop" id="leadModalMario">
+    <div class="modal-window">
+      <button class="modal-close-trigger" onclick="closeLeadModalMario()" aria-label="Cerrar ventana">
+        <i data-lucide="x" style="width: 18px; height: 18px;"></i>
+      </button>
+
+      <div style="margin-bottom: 1.75rem;">
+        <h3 id="modalMarioTitle" style="font-size: 1.45rem; font-weight: 800; color: #fff; margin-bottom: 0.35rem;">Trabajemos Juntos</h3>
+        <p id="modalMarioSub" style="font-size: 0.85rem; color: var(--text-secondary);">Escribe tu consulta y conectemos directamente por WhatsApp.</p>
+      </div>
+
+      <form onsubmit="handleFormSubmitMario(event)">
+        <div class="input-row">
+          <label class="input-label" for="marioLeadName">Nombre Completo</label>
+          <input type="text" id="marioLeadName" class="input-field" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="input-row">
+          <label class="input-label" for="marioLeadPhone">Teléfono / WhatsApp</label>
+          <input type="tel" id="marioLeadPhone" class="input-field" placeholder="+1 (829) 000-0000" required>
+        </div>
+
+        <div class="input-row">
+          <label class="input-label" for="marioLeadIntent">¿Qué te trae hasta aquí?</label>
+          <select id="marioLeadIntent" class="select-field">
+            <option value="comprar">Quiero Comprar o Invertir en RD</option>
+            <option value="vender">Quiero Vender Mi Propiedad</option>
+            <option value="crecer">Quiero Crecer en Bienes Raíces</option>
+          </select>
+        </div>
+
+        <div class="input-row">
+          <label class="input-label" for="marioLeadMsg">Mensaje o Detalles</label>
+          <textarea id="marioLeadMsg" class="textarea-field" placeholder="Cuéntame brevemente sobre tu requerimiento..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-magnetic btn-magnetic-primary" style="width: 100%; margin-top: 0.75rem; justify-content: center;">
+          <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+          <span>Enviar Mensaje a Mario Almonte</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-bar">
+    <div class="container-canvas">
+      <div class="footer-row-split">
+        <div>
+          <div style="font-weight: 800; color: #fff; font-size: 1.05rem;">Mario Almonte</div>
+          <div style="font-size: 0.72rem; color: var(--accent-amber); font-family: var(--font-mono); letter-spacing: 0.1em; text-transform: uppercase;">CEO & Broker Owner • Alveare Realty</div>
+        </div>
+
+        <div style="display: flex; gap: 1.25rem;">
+          <a href="#hero" style="color: var(--text-secondary); text-decoration: none;">Inicio</a>
+          <a href="#historia" style="color: var(--text-secondary); text-decoration: none;">Mi Historia</a>
+          <a href="#alveare" style="color: var(--text-secondary); text-decoration: none;">Alveare</a>
+          <a href="#filosofia" style="color: var(--text-secondary); text-decoration: none;">Filosofía</a>
+          <a href="#trabajemos" style="color: var(--text-secondary); text-decoration: none;">Trabajemos Juntos</a>
+        </div>
+      </div>
+
+      <div class="footer-copy-sub">
+        <div>© 2026 Mario Almonte & Alveare Realty. Todos los derechos reservados.</div>
+        <div>República Dominicana</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
