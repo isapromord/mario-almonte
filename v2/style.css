@@ -2136,31 +2136,35 @@ body {
     margin-bottom: 1.25rem;
   }
 
-  /* Show Dedicated Mobile Photo Stage: Mario is 100% visible, centered, zero text overlap */
+  /* Show Dedicated Mobile Photo Stage: Edge-to-edge full-bleed, zero rounded corners */
   .hero-mobile-photo-stage {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0.75rem auto 1.85rem auto;
+    display: block;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
   }
 
   .mobile-photo-inner {
     position: relative;
     width: 100%;
-    max-width: 360px;
-    height: clamp(380px, 48vh, 450px);
-    border-radius: 20px;
+    max-width: 100%;
+    height: clamp(380px, 52vh, 480px);
+    border-radius: 0px;
+    border: none;
+    box-shadow: none;
     overflow: hidden;
-    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 30px rgba(255, 122, 26, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .mobile-mario-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 12%;
+    object-position: center 10%;
     display: block;
+    border-radius: 0px;
   }
 
   .mobile-photo-feather-bottom {
