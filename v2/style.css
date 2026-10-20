@@ -783,6 +783,52 @@ body {
   gap: 1.1rem;
 }
 
+/* Franja de Cifras Concreta (Hero Metrics Strip) */
+.hero-metrics-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 2.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 580px;
+}
+
+.metric-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.metric-num {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.metric-lbl {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    SCENE 01: HERO CINEMATIC FULL-BLEED STAGE (True Floor-to-Ceiling Atmosphere)
    NO BOXES. NO CARDS. NO BORDERS AROUND MARIO.
@@ -1411,6 +1457,39 @@ body {
   gap: 2rem;
 }
 
+/* Filosofía Unificada: Los Detalles Importan + Excelencia & Compromiso */
+.filosofia-unified-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.filosofia-card {
+  padding: clamp(2.2rem, 3.5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight-duo-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.spotlight-mini-panel {
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  transition: border-color var(--trans-smooth), background var(--trans-smooth);
+}
+
+.spotlight-mini-panel:hover {
+  background: rgba(255, 122, 26, 0.04);
+  border-color: rgba(255, 122, 26, 0.25);
+}
+
 .spotlight-panel {
   padding: clamp(2.5rem, 4vw, 3.5rem);
 }
@@ -1869,6 +1948,56 @@ body {
   margin-bottom: 2rem;
 }
 
+/* Unified Legacy Closing Box */
+.legacy-closing-box {
+  margin-top: 4.5rem;
+  max-width: 840px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--radius-lg);
+}
+
+.legacy-closing-box .line-origin {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.legacy-closing-box .legacy-divider-line {
+  width: 60px;
+  height: 2px;
+  background: var(--accent-amber);
+  margin: 1.5rem auto;
+  border-radius: 1px;
+}
+
+.legacy-closing-box .line-legacy-final {
+  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  letter-spacing: -0.015em;
+  max-width: 680px;
+  margin: 0 auto 2.25rem auto;
+}
+
+.legacy-closing-box .legacy-sign-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  padding-top: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 .legacy-sign-block {
   display: flex;
   align-items: center;
@@ -2104,6 +2233,7 @@ body {
     gap: 3rem;
   }
   .spotlight-duo-grid,
+  .filosofia-unified-grid,
   .action-cards-trio,
   .tres-pilares-alveare,
   .objetivo-duo-grid,
@@ -2208,6 +2338,28 @@ body {
     width: 100%;
     justify-content: center;
     padding: 1.05rem 1.5rem;
+  }
+
+  .hero-metrics-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .hero-metrics-strip .metric-divider {
+    display: none;
+  }
+
+  .hero-metrics-strip .metric-num {
+    font-size: 1.55rem;
+  }
+
+  .legacy-closing-box {
+    margin-top: 3.5rem;
+    padding: 2.5rem 1.5rem;
   }
 
   .hero-spacer-column {
